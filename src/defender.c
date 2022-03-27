@@ -1,5 +1,6 @@
 // Standard headers
 #include <stdio.h>
+#include <stdlib.h>
 
 // Internal headers
 #include "direction.h"
@@ -21,9 +22,10 @@ direction_t execute_defender_strategy(
   // TODO: unused parameters, remove these lines later
   UNUSED(defender_position);
   UNUSED(attacker_spy);
+  srand(time(NULL));
 
   // TODO: Implement Defender logic here
-  return (direction_t) DIR_LEFT;
+  return (direction_t) {(int)(rand()%2 - 1), (int)(rand() %1 - 1)};
 }
 
 /*----------------------------------------------------------------------------*/
